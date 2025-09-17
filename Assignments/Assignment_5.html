@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card{
+            background-color: aliceblue;
+            width: 500px;
+            height: 500px;
+        }
+        nav{
+            display: flex;
+        }
+
+        h2{
+            padding-left: 110px;
+        }
+        .incrementer{
+            margin-top: 20%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+        }
+        .button{
+            display: flex;
+            gap: 50px;
+        }
+        .display{
+            background-color: rgb(0, 0, 195);
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #number{
+            font-size: 50px;
+            color: white;
+            font-weight: bold;}
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <nav>
+            <img src="/image.jpg" alt="" width="80px" >
+            <h2>Counter App</h2>
+        </nav>
+
+       
+
+        <div class="incrementer">
+            <div class="display">
+                <p id="number"></p>
+            </div>
+            <div class="button">
+                <button onclick="inc()">+</button>
+                <button onclick="dec()">-</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="card2">
+            
+    </div>
+
+    <script>
+        function inc(){
+            var a = document.getElementById("number").innerHTML;
+            a++;
+            if(a > 10){
+                alert("no");
+                a = 1;
+            }
+            document.getElementById("number").innerHTML = a; 
+        }
+        function dec(){
+            var a = document.getElementById("number").innerHTML;
+            if(a <= 0){
+                alert("no");
+                a = 1;
+            }
+            a--;
+            document.getElementById("number").innerHTML = a; 
+        }
+    </script>
+</body>
+</html>
