@@ -1,81 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React from 'react'
 import './App.css'
+import Card from './components/Card.jsx'
+import Navbar from './components/Navbar.jsx'
 
 function App() {
-
   return (
-    <>
-  
-      <div>
-        <h1>To-Do List</h1>
-        
-        <Container>
-          <Row>
-            <Col>
 
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-
-            </Col>
-
-            <Col>
-
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-
-            </Col>
-
-            <Col>
-
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-
-            </Col>
-            
-          </Row>
-
-    </Container>
-
+    <div id='main-container'>
+      <div id='nav-container'>
+        <Navbar navheader= "HOME"/>
+        <br />
       </div>
 
-    </>
+      <div id="cards-container">
+        <Card name = "Batman1" age = "45"/>
+        <br />
+        <Card name = "Batman2" age ="50"/>
+        <br />
+        <Card name = "Batman3" age = "62"/>
+        <br />
+      </div>
+      
+    </div>
   )
 }
 
