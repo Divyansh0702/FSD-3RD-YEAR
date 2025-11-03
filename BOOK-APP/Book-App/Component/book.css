@@ -1,0 +1,8 @@
+#book{
+    border: px solid red;
+    height: 400px;
+    width: 300px;
+    background-color: coral;
+    text-align: center;
+    padding: 10px;
+}
