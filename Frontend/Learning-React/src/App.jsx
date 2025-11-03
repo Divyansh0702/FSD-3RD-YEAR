@@ -2,6 +2,8 @@ import React from 'react'
 import './App.css'
 import Card from './components/Card.jsx'
 import Navbar from './components/Navbar.jsx'
+import UseState from './useState.jsx'
+import Count1 from './components/Count1.jsx'
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
         <br />
       </div>
       
+      <div>
+        <UseState />
+        <Count1 />
+      </div>
     </div>
   )
 }
