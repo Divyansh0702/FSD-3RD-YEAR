@@ -1,6 +1,17 @@
 #card{
     border: 2px solid black;
-    height: 150px;
+    border-radius: 15px;
+    height: 400px;
     width: 150px;
     text-align: center;
+    margin: 20px;
+    padding: 50px;
+    float: left;
+    background-color: lightgrey;    
+}
+
+#card img{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }

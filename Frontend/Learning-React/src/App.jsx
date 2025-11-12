@@ -7,21 +7,32 @@ import Count1 from './components/Count1.jsx'
 import Fashion from './components/Fashion.jsx'
 
 function App() {
-  const [Fa1, setFa1] = useState([]);
+  const [showFashion, setShowFashion] = useState([]);
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
     .then(res => res.json())
-    .then(data => {setFa1(data)} );
+    .then(data => setShowFashion(data))
+    .catch(err => console.error(err));
   }, []);
 
   return (
 
     <div>
+      <div>
+        <h1>Fashion Show</h1>
+      </div>
+
+{/* JSON  */}
       {
-        Fa1.map((f, item) => (
-          <Fa1 key = {item} props={f}/>
+        showFashion.map((item) => (
+          <Fashion 
+            key = {item.id}  
+            image={item.image}
+            title={item.title}
+            price={item.price}/>
         ))
       }
+
     </div>
 
     // <div id='main-container'>
